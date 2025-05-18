@@ -13,7 +13,7 @@ function Signup() {
           <p>Choose your role:</p>
           <div class="role-selection">
             <label>
-              <input type="radio" name="role" value="user" checked="" onchange="toggleFields()"/> Customer
+              <input type="radio" name="role" value="customer" checked="" onchange="toggleFields()"/> Customer
             </label>
             <label>
               <input type="radio" name="role" value="artisan" onchange="toggleFields()"/> Artisan
