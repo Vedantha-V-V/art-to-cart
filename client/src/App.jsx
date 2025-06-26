@@ -1,34 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import './frontpage.css';
-import Header from './Header';
-import Banner from './Banner';
-import Footer from './Footer';
-import Categories from './Categories';
-import About from './About';
-import Contact from './Contact';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+
+import { logo } from './assets'
+
+import Home from './pages/Home'
+import CreatePost from './pages/CreatePost'
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Banner />
-              </>
-            }
-          />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+    <BrowserRouter>
+      <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
+      <Link to="/">
+      <img src={logo} alt="logo" className="w-28 object-contain"/>
+      </Link>
+      <Link to="/create-post" className="font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md">
+      Create
+      </Link>
+    </header>
+    <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h0[calc(100vh-73px)]">
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="create-post" element={<CreatePost/>}/>
+      </Routes>
+    </main>
+    </BrowserRouter>
   );
 }
 
