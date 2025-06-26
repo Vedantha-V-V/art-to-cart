@@ -1,5 +1,5 @@
 import React from 'react';
-import './frontpage.css';
+//import './frontpage.css';
 
 function ProductCard({ image, name, rating, price }) {
   return (

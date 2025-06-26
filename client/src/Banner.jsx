@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './frontpage.css';
+//import './frontpage.css';
 import BannerImg from './Photos/banner-2.jpg';
 
 function Banner() {
