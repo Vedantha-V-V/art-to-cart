@@ -1,6 +1,8 @@
-# React + Vite
+# DALL-E 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Frontend
+
+Minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
