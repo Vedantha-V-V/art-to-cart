@@ -1,29 +1,22 @@
-import React from 'react';
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import { StreamChat } from 'stream-chat'
+import { Chat } from 'stream-chat-react'
+import Cookies from 'universal-cookie'
 
-import { logo } from './assets'
+import { ChannelContainer,ChannelListContainer } from './components'
+import './App.css'
 
-import Home from './pages/Home'
-import CreatePost from './pages/CreatePost'
+const apiKey = ''
+
+const client = StreamChat.getInstance(apiKey)
 
 function App() {
   return (
-    <BrowserRouter>
-      <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
-      <Link to="/">
-      <img src={logo} alt="logo" className="w-28 object-contain"/>
-      </Link>
-      <Link to="/create-post" className="font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md">
-      Create
-      </Link>
-    </header>
-    <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h0[calc(100vh-73px)]">
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="create-post" element={<CreatePost/>}/>
-      </Routes>
-    </main>
-    </BrowserRouter>
+    <div className="app__wrapper">
+      <Chat client={client} theme="team light">
+        <ChannelListContainer/>
+        <ChannelContainer/>
+      </Chat>
+    </div>
   );
 }
 

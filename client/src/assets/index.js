@@ -1,9 +1,6 @@
-import download from './download.png';
-import logo from './logo.svg';
-import preview from './preview.png';
-
-export {
-  download,
-  logo,
-  preview,
-};
+export { AddChannel } from './AddChannel';
+export { ChannelInfo } from './ChannelInfo';
+export { CloseCreateChannel } from './CloseCreateChannel';
+export { InviteIcon } from './InviteIcon';
+export { LightningBolt } from './LightningBolt';
+export { SearchIcon } from './SearchIcon';
